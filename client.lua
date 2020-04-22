@@ -40,21 +40,12 @@ end)
 
 function knifesBtn() 
     RageUI.Button("Knifes" , nil, {
-
         RightLabel = "→→→",
     }, true, function(Hovered, Active, Selected)
         if Selected then
-           print("selected knife menu")
+            -- My action the button is selected
         end
-        if Hovered then
-           -- My action the button is hovered by the mouse
-        end
-        if Active then
-           -- My action the button is hightlighted
-        end
-
-end, RMenu:Get('vrpgunshops', 'knifes'))
-
+    end, RMenu:Get('vrpgunshops', 'knifes'))
 end
 
 function pistolBtn() 
@@ -63,95 +54,63 @@ function pistolBtn()
         RightLabel = "→→→",
     }, true, function(Hovered, Active, Selected)
         if Selected then
-            print("selected pistol menu")
+            -- My action the button is selected
         end
-        if Hovered then
-           -- My action the button is hovered by the mouse
-        end
-        if Active then
-           -- My action the button is hightlighted
-        end
-
-end, RMenu:Get('vrpgunshops', 'pistols'))
-
+    end, RMenu:Get('vrpgunshops', 'pistols'))
 end
 
 function smgsBtn() 
     RageUI.Button("Submachine Guns" , nil, {
-
         RightLabel = "→→→",
     }, true, function(Hovered, Active, Selected)
         if Selected then
-            print("selected smg menu") 
+            if Selected then
+                -- My action the button is selected
+            end
         end
-        if Hovered then
-           -- My action the button is hovered by the mouse
-        end
-        if Active then
-           -- My action the button is hightlighted
-        end
-
-end, RMenu:Get('vrpgunshops', 'smgs'))
-
+    end, RMenu:Get('vrpgunshops', 'smgs'))
 end
 
 function shotgunBtn() 
     RageUI.Button("Shotguns" , nil, {
-
         RightLabel = "→→→",
     }, true, function(Hovered, Active, Selected)
         if Selected then
-            print("selected shotgun menu")
+            -- My action the button is selected
         end
-        if Hovered then
-           -- My action the button is hovered by the mouse
-        end
-        if Active then
-           -- My action the button is hightlighted
-        end
-
-end, RMenu:Get('vrpgunshops', 'shotgun'))
-
+    end, RMenu:Get('vrpgunshops', 'shotgun'))
 end
+
 function arsBtn() 
     RageUI.Button("Assault Rifles" , nil, {
-
         RightLabel = "→→→",
     }, true, function(Hovered, Active, Selected)
         if Selected then
-            print("selected assault rifle menu")
+            -- My action the button is selected
         end
-
-
-end, RMenu:Get('vrpgunshops', 'ars'))
-
+    end, RMenu:Get('vrpgunshops', 'ars'))
 end
+
 function sniperBtn() 
     RageUI.Button("Sniper Rifles" , nil, {
-
         RightLabel = "→→→",
     }, true, function(Hovered, Active, Selected)
         if Selected then
-            print("selected sniper menu")
+            -- My action the button is selected
         end
-
-
-end, RMenu:Get('vrpgunshops', 'sniper'))
-
+    end, RMenu:Get('vrpgunshops', 'sniper'))
 end
+
 function throwBtn() 
     RageUI.Button("Throwables" , nil, {
-
         RightLabel = "→→→",
     }, true, function(Hovered, Active, Selected)
         if Selected then
-            print("selected throwables menu")
+            -- My action the button is selected
         end
-
-
-end, RMenu:Get('vrpgunshops', 'throw'))
-
+    end, RMenu:Get('vrpgunshops', 'throw'))
 end
+
 --[[Sub Menus]]
 
 function knifesSM() 
@@ -163,14 +122,10 @@ function knifesSM()
                 if Selected then
                    TriggerServerEvent('VRPGUNSHOPS:buywap', p.price, p.hash)
                 end
-       end)
-    end
-
-    end, function()
-        ---Panels
-      
+            end)
+        end
+        end, function()
     end)
-
 end
 
 function pistolSM() 
@@ -182,14 +137,10 @@ function pistolSM()
                 if Selected then
                    TriggerServerEvent('VRPGUNSHOPS:buywap', p.price, p.hash)
                 end
-       end)
-    end
-
-    end, function()
-        ---Panels
-      
+            end)
+        end
+        end, function()
     end)
-
 end
 
 function smgsSM() 
@@ -201,15 +152,10 @@ function smgsSM()
                 if Selected then
                     TriggerServerEvent("VRPGUNSHOPS:buywap",p.price, p.hash)
                 end
-
-       end)
-    end
-
-    end, function()
-        ---Panels
-      
+            end)
+        end
+        end, function()
     end)
-
 end
 
 function shotgunSM() 
@@ -221,15 +167,10 @@ function shotgunSM()
                 if Selected then
                     TriggerServerEvent("VRPGUNSHOPS:buywap",p.price, p.hash)
                 end
-
-       end)
-    end
-
-    end, function()
-        ---Panels
-      
+            end)
+        end
+        end, function()
     end)
-
 end
 
 function arsSM() 
@@ -241,15 +182,10 @@ function arsSM()
                 if Selected then
                     TriggerServerEvent("VRPGUNSHOPS:buywap",p.price, p.hash)
                 end
-
-       end)
-    end
-
-    end, function()
-        ---Panels
-      
+            end)
+        end
+        end, function()
     end)
-
 end
 
 function sniperSM() 
@@ -261,15 +197,10 @@ function sniperSM()
                 if Selected then
                     TriggerServerEvent("VRPGUNSHOPS:buywap",p.price, p.hash)
                 end
-
-       end)
-    end
-
-    end, function()
-        ---Panels
-      
+            end)
+        end
+        end, function()
     end)
-
 end
 
 function throwSM() 
@@ -281,15 +212,10 @@ function throwSM()
                 if Selected then
                     TriggerServerEvent("VRPGUNSHOPS:buywap",p.price, p.hash)
                 end
-
-       end)
-    end
-
-    end, function()
-        ---Panels
-      
+            end)
+        end
+        end, function()
     end)
-
 end
 
 for k,v in pairs(cfg.gunshops) do 
@@ -348,20 +274,14 @@ AddEventHandler("VRPGUNSHOPS:givewap", function(hash)
     GiveWeaponToPed(PlayerPedId(), hash, 250, false, false)
 end)
 
-
-
-
 function isInArea(v, dis) 
 
     if Vdist2(GetEntityCoords(PlayerPedId(-1)), v) < dis then  
         return true
     else 
-        -- print(false)
         return false
     end
-
 end
-
 
 function alert(msg) 
     SetTextComponentFormat("STRING")
