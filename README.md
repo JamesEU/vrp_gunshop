@@ -6,6 +6,7 @@ Features:
 * Fully customizable with a config file
 * Works perfectly with OneSync & OneSync Infinity
 * Everything you need for a Gunshop
+* You can make it so only certain groups can buy weapons
 
 Notes:
 * This is only limited to the vRP framework, an ESX version will be coming out very shortly and will be linked underneath this thread.
