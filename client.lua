@@ -218,20 +218,22 @@ function throwSM()
     end)
 end
 
-for k,v in pairs(cfg.gunshops) do 
-    local px,py,pz,ph = table.unpack(v.ped)
-    local model = -1643617475
-    local v2 = vector3(px,py,pz)
-    RequestModel(model)
-    while not HasModelLoaded(model) do
-        RequestModel(model)
-        Citizen.Wait(0)
-    end
-    ped = CreatePed(5, model, v2, ph, true, false)
-    SetEntityInvincible(ped, true)
-    SetEntityCanBeDamaged(ped, false)
-    SetPedCanRagdoll(GetPlayerPed(-1), false)
-end
+--! Currently Broken (Dynamic#0001)
+--! Hot Fix for now
+-- for k,v in pairs(cfg.gunshops) do 
+--     local px,py,pz,ph = table.unpack(v.ped)
+--     local model = -1643617475
+--     local v2 = vector3(px,py,pz)
+--     RequestModel(model)
+--     while not HasModelLoaded(model) do
+--         RequestModel(model)
+--         Citizen.Wait(0)
+--     end
+--     ped = CreatePed(5, model, v2, ph, true, false)
+--     SetEntityInvincible(ped, true)
+--     SetEntityCanBeDamaged(ped, false)
+--     SetPedCanRagdoll(GetPlayerPed(-1), false)
+-- end
 
 isInMenu = false
 currentAmmunition = nil
