@@ -21,7 +21,6 @@ How to install:
 6. Start your two resources & have fun!
 
 Credits:
-* [Arthur](https://github.com/arthur-rl) for help with many things to do with the tool.
 * [Naytox](https://github.com/naytoxp) for help with fixes and making the script functionable at multiple locations.
 * [RageUI](https://github.com/bxrksggs/RageUI) / [iTexZoz](https://github.com/iTexZoz) for the easy GUI creation for the menu.
 
