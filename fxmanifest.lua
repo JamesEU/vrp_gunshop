@@ -5,6 +5,12 @@ dependencies {
     "RageUI",
     "vrp"
 }
+
+shared_scripts {
+    "cfg/config.lua"
+}
+
+
 client_scripts {
     "@RageUI/src/RMenu.lua",
     "@RageUI/src/menu/RageUI.lua",
@@ -32,13 +38,12 @@ client_scripts {
     "@RageUI/src/menu/panels/UIPercentagePanel.lua",
     "@RageUI/src/menu/panels/UIStatisticsPanel.lua",
     "@RageUI/src/menu/windows/UIHeritage.lua",
-    "cfg/config.lua",
     'client.lua',
 
 }
 
+
 server_scripts{
     "@vrp/lib/utils.lua",
-    "cfg/config.lua",
     "server.lua"
 }
