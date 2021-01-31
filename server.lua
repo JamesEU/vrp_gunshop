@@ -8,16 +8,16 @@ AddEventHandler('VRPGUNSHOPS:buywap', function(price, hash)
     local foundWeapon = false
     local source = source
     userid = vRP.getUserId({source})
+    for i,v in pairs(cfg.guns) do 
+        for a,c in pairs(v) do 
+            if c.hash == hash and c.price == price then
+                foundWeapon = true 
+                break
+            end
+        end
+    end
     if cfg.perm ~= nil then 
         if vRP.hasPermission({userid, cfg.perm}) then
-            for i,v in pairs(cfg.guns) do 
-                for a,c in pairs(v) do 
-                    if c.hash == hash and c.price == price then
-                        foundWeapon = true 
-                        break
-                    end
-                end
-            end
             if foundWeapon then
                 if vRP.tryPayment({userid, price}) then
                     TriggerClientEvent("VRPGUNSHOPS:givewap", source,  hash)
